@@ -6,7 +6,10 @@
 
 body {
   /*overflow-x: hidden;*/
-  color: #36393f;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,153,255,1) 100%);
+
+
+  color: #fff;
   /*overflow-y: hidden;*/
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
@@ -23,8 +26,9 @@ body {
 }
 
 .blue-content {
-    color: #fff;
+    color: #36393f;
     padding-left: 5%;
     margin-top: -5px;
-    background-color: #0099ff;
+    background-color: #fff;
 }
+
