@@ -3,7 +3,14 @@
   padding: 0px;
   box-sizing: content-box;
 }
-
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
 body {
   /*overflow-x: hidden;*/
 background: linear-gradient(90deg, rgba(203,14,190,1) 0%, rgba(203,14,190,1) 33%, rgba(0,153,255,1) 100%);
