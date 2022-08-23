@@ -13,7 +13,28 @@
   body {
   background-color: #FFFFF8;
 }
-
+@keyframes rotateanddown {
+  0% {
+   height: 80px;
+  width: 80px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  &:focus {
+    outline: 2px dashed #17171D;
+  }
+  5% {
+    transform: rotate(90deg)
+   height: 80px;
+  width: 80px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  &:focus {
+    outline: 2px dashed #17171D;
+  }
+  }
+  
 .centerThings {
   display: flex;
   justify-content: center;
@@ -22,8 +43,8 @@
 }
 
 #coffeeButton {
-  height: 80px;
-  width: 80px;
+  height: 200px;
+  width: 200px;
   border: none;
   background: none;
   cursor: pointer;
