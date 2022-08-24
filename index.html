@@ -263,7 +263,10 @@ position: absolute;
 </style>
 <script>
     window.addEventListener("load",function(){
-  
+  function setHeight(100) {
+  var canvas = document.getElementById("myCanvas");  
+  canvas.width = width;
+}
     var canvas = document.getElementById("mycanvas");
     var ctx = canvas.getContext("2d");
     var win_width = window.innerWidth;
