@@ -11,7 +11,7 @@
     <div class="inner-header flex">
     <!--Just the logo.. Don't mind this-->
     
-    <h1>Hello!</h1>
+    <h1>Bekfast43</h1>
     </div>
     
     <!--Waves Container-->
@@ -22,10 +22,10 @@
         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
         </defs>
         <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
         </g>
       </svg>
     </div>
@@ -116,17 +116,19 @@
 
 
 .blue-content {
-   color: #36393f;
+   color: #fff;
    padding-left: 5%;
    margin-top: -5px;
-   background-color: #fff;
+   background-color: #000;
 }
 
 
 body {
   margin:0;
-  background: linear-gradient(90deg, rgba(203,14,190,1) 0%, rgba(203,14,190,1) 33%, rgba(0,153,255,1) 100%);
+  /*background: linear-gradient(90deg, rgba(203,14,190,1) 0%, rgba(203,14,190,1) 33%, rgba(0,153,255,1) 100%);*/
   font-family: 'PT Sans', sans-serif;
+  color: #000;
+  background-image: url(https://i.pinimg.com/originals/3a/43/55/3a4355ca3314170b516c494bdc534dfa.gif);
 }
 
 
@@ -153,8 +155,32 @@ p {
 .header {
   position:relative;
   text-align:center;
-  color:white;
+  color: #000;
 }
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+  .logo {
+    animation: reveal 2s ease-in-out;
+    
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+.logo:hover {
+  animation: reveal 3s;
+position: absolute;
+  left: 50px;
+  top: 50px;
+  height: 500px;
+  width:500px;
+  fill:black;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+  }
 .inner-header {
   height:65vh;
   width:100%;
