@@ -1,4 +1,5 @@
 <html>
+    
     <div class="wrapper">
   <canvas id="mycanvas">
 </div> 
@@ -340,9 +341,11 @@ position: absolute;
         //   }
         // }
       }  
+        var evt = document.createEvent('auidio');  
+evt.initEvent('load', false, false);  
+window.dispatchEvent(evt);
       requestAnimationFrame(animate);
     }
-    animate();
-  });var audio = new Audio('the-dude-is-not-in-leave-a-message-after-the-beep-it-takes-a-minute.mp3');
-audio.play();
-</script>
+  const sound = require("sound-play");
+sound.play("the-dude-is-not-in-leave-a-message-after-the-beep-it-takes-a-minute.mp3");
+<script>
