@@ -133,6 +133,10 @@ body {
   color: #000;
 }
 
+#mycanvas {
+height: 768px
+    
+    }
 
 h1 {
     font-size: 50px;
@@ -306,7 +310,7 @@ position: absolute;
     Particle.prototype.drop = function(){
       if(this.y > win_height) this.y = -(Math.random() * 1000 + 100);
       this.y += this.speed;
-      ctx.fillStyle = "#0099ff";
+      ctx.fillStyle = "#000";
       ctx.beginPath();
       ctx.rect(this.x, this.y, this.width, this.height);
       ctx.closePath();
