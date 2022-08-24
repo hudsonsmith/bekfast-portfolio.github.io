@@ -162,7 +162,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 
 
 <style>
- .ocean {
+.ocean {
   height: 5%;
   width:100%;
   position:absolute;
@@ -171,20 +171,8 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
   background: #015871;
 }
 
-.wave:nth-of-type(2) {
-  top: -175px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
-}
 
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-25px,0);
-  }
-  50% {
-    transform: translate3d(0,5px,0);
-  }
-}
+
 
 waves {
   position:relative;
@@ -244,4 +232,5 @@ waves {
     font-size:24px;
   }
 }
+
 </style>
