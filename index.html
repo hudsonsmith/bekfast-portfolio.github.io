@@ -136,7 +136,7 @@ body {
 }
 
 #mycanvas {
-height: 1400px
+height: 700px
     
     }
 
@@ -265,7 +265,7 @@ position: absolute;
     window.addEventListener("load",function(){
   function setHeight(10) {
   var canvas = document.getElementById("myCanvas");  
-  canvas.width = width;
+  canvas.width =height;
 }
     var canvas = document.getElementById("mycanvas");
     var ctx = canvas.getContext("2d");
@@ -280,7 +280,7 @@ position: absolute;
     function Particle(){
       this.dropeds = [];
       this.x = Math.random() * win_width;
-      this.y = -(Math.random() * 1000 + 1000);
+      this.y = -(Math.random() * 10 + 10);
       this.width = Math.floor(Math.random() * 2 + 1);
       if(this.width == 2){
         this.height = Math.floor(Math.random() * 20 + 17);
@@ -313,7 +313,7 @@ position: absolute;
     }
 
     Particle.prototype.drop = function(){
-      if(this.y > win_height) this.y = -(Math.random() * 1000 + 100);
+      if(this.y > win_height) this.y = -(Math.random() * 100 + 100);
       this.y += this.speed;
       ctx.fillStyle = "#000";
       ctx.beginPath();
