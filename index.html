@@ -193,7 +193,7 @@ position: absolute;
 #mycanvas {
     position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 100%;
     background-color: #fff;
 }
 
@@ -313,7 +313,7 @@ position: absolute;
     Particle.prototype.drop = function(){
       if(this.y > win_height) this.y = -(Math.random() * 1000 + 100);
       this.y += this.speed;
-      ctx.fillStyle = "#0099ff";
+      ctx.fillStyle = "#000";
       ctx.beginPath();
       ctx.rect(this.x, this.y, this.width, this.height);
       ctx.closePath();
