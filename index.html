@@ -1,5 +1,7 @@
 <html>
-    
+    <div class="wrapper">
+  <canvas id="mycanvas"></canvas>
+</div> 
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -123,6 +125,9 @@
 }
 
 
+#mycanvas {
+    background-color: #222;
+}
 body {
   margin:0;
   /*background: linear-gradient(90deg, rgba(203,14,190,1) 0%, rgba(203,14,190,1) 33%, rgba(0,153,255,1) 100%);*/
@@ -252,4 +257,85 @@ position: absolute;
     5% {
       transform: rotate(45deg);
     }
-  </style
+</style>
+<script>
+    window.addEventListener("load",function(){
+  
+    var canvas = document.getElementById("mycanvas");
+    var ctx = canvas.getContext("2d");
+    var win_width = window.innerWidth;
+    var win_height = window.innerHeight;
+    var count = 100;
+    var particles = [];
+    var createdObj = 0;
+    canvas.setAttribute("width", win_width);
+    canvas.setAttribute("height",win_height);
+
+    function Particle(){
+      this.dropeds = [];
+      this.x = Math.random() * win_width;
+      this.y = -(Math.random() * 1000 + 100);
+      this.width = Math.floor(Math.random() * 2 + 1);
+      if(this.width == 2){
+        this.height = Math.floor(Math.random() * 20 + 17);
+      } else{
+        this.height = Math.floor(Math.random() * 15 + 10);
+      }
+      this.speed = Math.random()*10 + 5;
+
+      this.Droped = function(x,y){
+          createdObj = 1;
+          this.color = "#0099ff";
+          this.x = x;
+          this.y = y;
+          this.radius = 1;
+          this.speed = Math.random() * 5 + 3;
+          this.angle = Math.PI* (Math.random() * 2);
+        
+          this.plump = function(){
+            if(this.radius > 30 ) this.radius = 1000;
+            this.radius += this.speed;
+            this.fx = this.radius * Math.cos(this.angle) + this.x;
+            this.fy = this.radius * Math.sin(this.angle) + this.y;
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.rect(this.fx, this.fy, 3, 3);
+            ctx.closePath();
+            ctx.fill();
+            }   
+      }  
+    }
+
+    Particle.prototype.drop = function(){
+      if(this.y > win_height) this.y = -(Math.random() * 1000 + 100);
+      this.y += this.speed;
+      ctx.fillStyle = "#0099ff";
+      ctx.beginPath();
+      ctx.rect(this.x, this.y, this.width, this.height);
+      ctx.closePath();
+      ctx.fill();
+    }
+     
+    for(var i = 0; i < count; i++){
+      particles[i] = new Particle();
+    }
+    function animate(){
+      ctx.clearRect(0, 0, win_width, win_height);
+      for (var i = 0; i < particles.length; i++) {
+        particles[i].drop();
+        // if( particles[i].y > win_height && particles[i].y < win_height + 10){
+        //   for(var a = 0; a < 25; a++){
+        //     particles[i].dropeds[a] = new particles[i].Droped(particles[i].x, particles[i].y);
+        //   }
+        // }
+        // if(createdObj == 1){
+        //   for(var n = 0; n < particles[i].dropeds.length; n++){
+        //     particles[i].dropeds[n].plump();
+        //   }
+        // }
+      }  
+      requestAnimationFrame(animate);
+    }
+    animate();
+  });
+</script>
