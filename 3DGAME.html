@@ -2,7 +2,7 @@
 <html>
 <body>
 	<div id='container'></div>
-	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/three.min.js'></script>
+	<script src='three/examples/jsm/loaders/GLTFLoader.js'></script>
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/PointerLockControls.js"></script>
 	<div id="blocker">
 
@@ -78,7 +78,8 @@ var UNITHEIGHT = 1095;                // Height of the cubes in the maze
 var CATCHOFFSET = 120;              // Distance from the player the dino to trigger game over
 var DINOCOLLISIONDISTANCE = 55;     // How many units away a dino can get to a wall
 var PLAYERCOLLISIONDISTANCE = 20;   // How many units away the player can get from the wall
-var PLAYERSPEED = 800.0             // How fast the player moves
+var PLAYERSPEED = 800.0       
+var PLAYERSPEED = 800.0       // How fast the player moves
 var DINOSPEED = 400.0               // How fast the dino is moving
 var DINOSCALE = 20;                 // How big our dino is scaled to
 
