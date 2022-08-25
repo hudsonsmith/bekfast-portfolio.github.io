@@ -74,12 +74,11 @@
     </style>
     <script> 
     var UNITWIDTH = 90;                 // Width of a cubes in the maze
-var UNITHEIGHT = 1095;                // Height of the cubes in the maze
+var UNITHEIGHT = 45;                // Height of the cubes in the maze
 var CATCHOFFSET = 120;              // Distance from the player the dino to trigger game over
 var DINOCOLLISIONDISTANCE = 55;     // How many units away a dino can get to a wall
 var PLAYERCOLLISIONDISTANCE = 20;   // How many units away the player can get from the wall
-var PLAYERSPEED = 800.0       
-var PLAYERSPEED = 800.0       // How fast the player moves
+var PLAYERSPEED = 800.0             // How fast the player moves
 var DINOSPEED = 400.0               // How fast the dino is moving
 var DINOSCALE = 20;                 // How big our dino is scaled to
 
@@ -118,6 +117,7 @@ var container = document.getElementById('container');
 var body = document.getElementById('body');
 var blocker = document.getElementById('blocker');
 
+// Get control of the mouse
 function getPointerLock() {
     document.onclick = function () {
         container.requestPointerLock();
@@ -133,6 +133,15 @@ function lockChange() {
         controls.enabled = true;
     } else {
         if (gameOver) {
+            // Doesn't work on CodePen, but will work locally and in UWP app
+            //location.reload();
+        }
+        blocker.style.display = "";
+        controls.enabled = false;
+    }
+}
+
+
 // Set up the game
 getPointerLock();
 init();
@@ -317,13 +326,12 @@ function createMazeCubes() {
 	     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
 	     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
 	     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
-      
     ];
 
     // wall details
     var cubeGeo = new THREE.BoxGeometry(UNITWIDTH, UNITHEIGHT, UNITWIDTH);
     var cubeMat = new THREE.MeshPhongMaterial({
-        color: 0xe4e6a8,
+        color: 0x81cfe0,
     });
 
     // Keep cubes within boundry walls
@@ -361,7 +369,7 @@ function createMazeCubes() {
 function createGround() {
     // Create the ground geometry and material
     var groundGeo = new THREE.PlaneGeometry(mapSize, mapSize);
-    var groundMat = new THREE.MeshPhongMaterial({ color: 0xd6dea7, side: THREE.DoubleSide, shading: THREE.FlatShading });
+    var groundMat = new THREE.MeshPhongMaterial({ color: 0xA0522D, side: THREE.DoubleSide, shading: THREE.FlatShading });
 
     // Create the ground and rotate it flat
     var ground = new THREE.Mesh(groundGeo, groundMat);
@@ -470,7 +478,7 @@ function triggerChase() {
 // Dino has caught the player. Turn on end prompt.
 function caught() {
     blocker.style.display = '';
-    instructions.innerHTML = "haha YOU LOSE.</br></br></br> press the reload button to try again because you lost HAHA";
+    instructions.innerHTML = "GAME OVER </br></br></br> Press ESC to restart";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
@@ -585,7 +593,6 @@ function detectDinoCollision() {
     // If we have a front collision, we have to adjust our direction so return true
     if (rayIntersect(rayCasterF, DINOCOLLISIONDISTANCE))
         return true;
-	
     else
         return false;
 
