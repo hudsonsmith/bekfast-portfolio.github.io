@@ -266,7 +266,7 @@ position: absolute;
     }
 </style>
 <script>
-   window.addEventListener("load",function(){
+ window.addEventListener("load",function(){
   
     var canvas = document.getElementById("mycanvas");
     var ctx = canvas.getContext("2d");
@@ -292,7 +292,7 @@ position: absolute;
 
       this.Droped = function(x,y){
           createdObj = 1;
-          this.color = "#000";
+          this.color = "#0099ff";
           this.x = x;
           this.y = y;
           this.radius = 1;
@@ -316,7 +316,7 @@ position: absolute;
     Particle.prototype.drop = function(){
       if(this.y > win_height) this.y = -(Math.random() * 1000 + 100);
       this.y += this.speed;
-      ctx.fillStyle = "#000";
+      ctx.fillStyle = "#0099ff";
       ctx.beginPath();
       ctx.rect(this.x, this.y, this.width, this.height);
       ctx.closePath();
@@ -341,5 +341,7 @@ position: absolute;
         //   }
         // }
       }  
+      requestAnimationFrame(animate);
     }
- 
+    animate();
+  });
