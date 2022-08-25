@@ -118,7 +118,6 @@ var container = document.getElementById('container');
 var body = document.getElementById('body');
 var blocker = document.getElementById('blocker');
 
-// Get control of the mouse
 function getPointerLock() {
     document.onclick = function () {
         container.requestPointerLock();
@@ -134,15 +133,6 @@ function lockChange() {
         controls.enabled = true;
     } else {
         if (gameOver) {
-            // Doesn't work on CodePen, but will work locally and in UWP app
-            //location.reload();
-        }
-        blocker.style.display = "";
-        controls.enabled = false;
-    }
-}
-
-
 // Set up the game
 getPointerLock();
 init();
