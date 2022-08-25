@@ -72,7 +72,7 @@
     </style>
     <script> 
     var UNITWIDTH = 90;                 // Width of a cubes in the maze
-var UNITHEIGHT = 1905;                // Height of the cubes in the maze
+var UNITHEIGHT = 45;                // Height of the cubes in the maze
 var CATCHOFFSET = 120;              // Distance from the player the dino to trigger game over
 var DINOCOLLISIONDISTANCE = 55;     // How many units away a dino can get to a wall
 var PLAYERCOLLISIONDISTANCE = 20;   // How many units away the player can get from the wall
@@ -155,7 +155,7 @@ function init() {
     scene = new THREE.Scene();
 
     // Add some fog for effects
-    scene.fog = new THREE.FogExp2(0x808080, 0.000015);
+    scene.fog = new THREE.FogExp2(0xcccccc, 0.0015);
 
     // Set render settings
     renderer = new THREE.WebGLRenderer();
@@ -189,8 +189,7 @@ function init() {
 
 
     // load the dino JSON model and start animating once complete
-    loader.load('https://s3-us-west-2.
-		/s.cdpn.io/515428/dino.json', function (geometry, materials) {
+    loader.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/dino.json', function (geometry, materials) {
 
 
         // Get the geometry and materials from the JSON
@@ -290,7 +289,7 @@ function listenForPlayerMovement() {
 
 // Add lights to the scene
 function addLights() {
-    var lightOne = new THREE.DirectionalLight(0x000);
+    var lightOne = new THREE.DirectionalLight(0xffffff);
     lightOne.position.set(1, 1, 1);
     scene.add(lightOne);
 
@@ -304,7 +303,7 @@ function createMazeCubes() {
     // Maze wall mapping, assuming matrix
     // 1's are cubes, 0's are empty space
     var map = [
-[0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1,],
+       [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1,],
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
 [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1,],
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
@@ -326,6 +325,7 @@ function createMazeCubes() {
 [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
 [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1,],
     ];
+
 
     // wall details
     var cubeGeo = new THREE.BoxGeometry(UNITWIDTH, UNITHEIGHT, UNITWIDTH);
@@ -464,7 +464,7 @@ function triggerChase() {
         // Game over when dino is the value of CATCHOFFSET units away from camera
         var distanceFrom = Math.round(dino.position.distanceTo(controls.getObject().position)) - CATCHOFFSET;
         // Alert and display distance between camera and dino
-        dinoAlert.innerHTML = "admirable big boy: " + distanceFrom;
+        dinoAlert.innerHTML = "Dino has spotted you! Distance from you: " + distanceFrom;
         dinoAlert.style.display = '';
         return true;
         // Not in agro range, don't start distance countdown
