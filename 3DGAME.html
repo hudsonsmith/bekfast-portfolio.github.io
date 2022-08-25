@@ -72,7 +72,7 @@
     </style>
     <script> 
     var UNITWIDTH = 90;                 // Width of a cubes in the maze
-var UNITHEIGHT = 45;                // Height of the cubes in the maze
+var UNITHEIGHT = 1905;                // Height of the cubes in the maze
 var CATCHOFFSET = 120;              // Distance from the player the dino to trigger game over
 var DINOCOLLISIONDISTANCE = 55;     // How many units away a dino can get to a wall
 var PLAYERCOLLISIONDISTANCE = 20;   // How many units away the player can get from the wall
@@ -155,7 +155,7 @@ function init() {
     scene = new THREE.Scene();
 
     // Add some fog for effects
-    scene.fog = new THREE.FogExp2(0xcccccc, 0.0015);
+    scene.fog = new THREE.FogExp2(0x000, 0.000015);
 
     // Set render settings
     renderer = new THREE.WebGLRenderer();
@@ -289,11 +289,11 @@ function listenForPlayerMovement() {
 
 // Add lights to the scene
 function addLights() {
-    var lightOne = new THREE.DirectionalLight(0xffffff);
+    var lightOne = new THREE.DirectionalLight(0x000);
     lightOne.position.set(1, 1, 1);
     scene.add(lightOne);
 
-    var lightTwo = new THREE.DirectionalLight(0xffffff, .4);
+    var lightTwo = new THREE.DirectionalLight(0x000, .4);
     lightTwo.position.set(1, -1, -1);
     scene.add(lightTwo);
 }
@@ -464,7 +464,7 @@ function triggerChase() {
         // Game over when dino is the value of CATCHOFFSET units away from camera
         var distanceFrom = Math.round(dino.position.distanceTo(controls.getObject().position)) - CATCHOFFSET;
         // Alert and display distance between camera and dino
-        dinoAlert.innerHTML = "Dino has spotted you! Distance from you: " + distanceFrom;
+        dinoAlert.innerHTML = "BIG BOY has spotted you! Distance from you: " + distanceFrom;
         dinoAlert.style.display = '';
         return true;
         // Not in agro range, don't start distance countdown
@@ -477,7 +477,7 @@ function triggerChase() {
 // Dino has caught the player. Turn on end prompt.
 function caught() {
     blocker.style.display = '';
-    instructions.innerHTML = "GAME OVER </br></br></br> Press ESC to restart";
+    instructions.innerHTML = "KILLED BY ADMIRABLE BIG BOY </br></br></br> Press restart to restart";
     gameOver = true;
     instructions.style.display = '';
     dinoAlert.style.display = 'none';
