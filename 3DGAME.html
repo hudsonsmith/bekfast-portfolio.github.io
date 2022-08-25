@@ -157,7 +157,7 @@ function init() {
     scene = new THREE.Scene();
 
     // Add some fog for effects
-    scene.fog = new THREE.FogExp2(0x000, 0.00015);
+    scene.fog = new THREE.FogExp2(0x808080, 0.00015);
 
     // Set render settings
     renderer = new THREE.WebGLRenderer();
@@ -291,7 +291,7 @@ function listenForPlayerMovement() {
 
 // Add lights to the scene
 function addLights() {
-    var lightOne = new THREE.DirectionalLight(0xffffff);
+    var lightOne = new THREE.DirectionalLight(0x000);
     lightOne.position.set(1, 1, 1);
     scene.add(lightOne);
 
