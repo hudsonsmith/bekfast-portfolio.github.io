@@ -289,11 +289,11 @@ function listenForPlayerMovement() {
 
 // Add lights to the scene
 function addLights() {
-    var lightOne = new THREE.DirectionalLight(0x000);
+    var lightOne = new THREE.DirectionalLight(0xfff);
     lightOne.position.set(1, 1, 1);
     scene.add(lightOne);
 
-    var lightTwo = new THREE.DirectionalLight(0x000, .4);
+    var lightTwo = new THREE.DirectionalLight(0xfff, .4);
     lightTwo.position.set(1, -1, -1);
     scene.add(lightTwo);
 }
