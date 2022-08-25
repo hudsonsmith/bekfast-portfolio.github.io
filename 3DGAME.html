@@ -1,6 +1,6 @@
 <!DOCTYPEhtml>
 <html>
-<body>
+<body><div id="sketchfab-embed-wrapper"> <iframe title="Samba Dancing" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d59efbad97f9467f82b5169984ad8c59/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/samba-dancing-d59efbad97f9467f82b5169984ad8c59?utm_medium=embed&utm_campaign=share-popup&utm_content=d59efbad97f9467f82b5169984ad8c59" target="_blank" style="font-weight: bold; color: #1CAAD9;"> Samba Dancing </a> by <a href="https://sketchfab.com/jansanw?utm_medium=embed&utm_campaign=share-popup&utm_content=d59efbad97f9467f82b5169984ad8c59" target="_blank" style="font-weight: bold; color: #1CAAD9;"> jansanw </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=d59efbad97f9467f82b5169984ad8c59" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
 	<div id='container'></div>
 	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/three.min.js'></script>
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/PointerLockControls.js"></script>
@@ -157,7 +157,7 @@ function init() {
     scene = new THREE.Scene();
 
     // Add some fog for effects
-    scene.fog = new THREE.FogExp2(0x808080, 0.00015);
+    scene.fog = new THREE.FogExp2(0x808080, 0.000015);
 
     // Set render settings
     renderer = new THREE.WebGLRenderer();
@@ -191,7 +191,8 @@ function init() {
 
 
     // load the dino JSON model and start animating once complete
-    loader.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/dino.json', function (geometry, materials) {
+    loader.load('https://s3-us-west-2.
+		/s.cdpn.io/515428/dino.json', function (geometry, materials) {
 
 
         // Get the geometry and materials from the JSON
@@ -465,7 +466,7 @@ function triggerChase() {
         // Game over when dino is the value of CATCHOFFSET units away from camera
         var distanceFrom = Math.round(dino.position.distanceTo(controls.getObject().position)) - CATCHOFFSET;
         // Alert and display distance between camera and dino
-        dinoAlert.innerHTML = "Dino has spotted you! Distance from you: " + distanceFrom;
+        dinoAlert.innerHTML = "admirable big boy: " + distanceFrom;
         dinoAlert.style.display = '';
         return true;
         // Not in agro range, don't start distance countdown
