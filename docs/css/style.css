@@ -1,0 +1,27 @@
+*, body, html {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+
+
+body {
+  margin:0;
+  /*background: linear-gradient(90deg, rgba(203,14,190,1) 0%, rgba(203,14,190,1) 33%, rgba(0,153,255,1) 100%);*/
+font-family: 'PT Sans', sans-serif;
+  color: #000;
+}
+
+h1 {
+  font-family: "Silkscreen";
+    font-size: 50px;
+}
+p {
+  font-size:25px;
+  /*color: #333333;*/
+}
+
+.game-selection {
+    background-color: #000;
+    height: 190%;
+}

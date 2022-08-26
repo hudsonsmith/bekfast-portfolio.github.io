@@ -1,371 +1,63 @@
+<!DOCTYPE html>
 <html>
-    <div class="wrapper">
-  <canvas id="mycanvas">
-</div> 
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
-    </head>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/animated-text.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/waves.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+  </head>
     <div class="header">
+
+      <!--Content before waves-->
+      <div class="inner-header flex">
+        <!--Just the logo.. Don't mind this-->
+        <h1 class="animated-text">Game Hub</h1>
+      </div>
     
-    <!--Content before waves-->
-    <div class="inner-header flex">
-    <!--Just the logo.. Don't mind this-->
-    
-    <h1 class="animated-text">Game Hub</h1>
+      <!--Waves Container-->
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
+          </g>
+        </svg>
+      </div>
     </div>
-    
-    <!--Waves Container-->
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
-        </g>
-      </svg>
+
+    <div class="game-selection">
+      <nav>
+        <div class="navbar">
+          <div class="container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>  
+            <div class="logo">
+              <h1>WELCOME TO YOUR GAMES</h1>
+            </div>
+            <div class="menu-items">
+              <li><a href="../games/space-invaders.html">Space Invaders</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-        
-    <!--Waves end-->
-    </canvas>
-    </div>
-    </div> 
-    <!--Header ends-->
-    
-    <!--Content starts-->
-    
-<!--Content ends-->
-<div class="blue-content">
-    <h1>Hello!</h1>
-    <p>Welcome to our site!</p>
-    <p>It is still a work in progress!</p>
-    <h1><a href="pages/game-selection.html">Game Selection</a></h1>
-</div>
 </html>
 <style>
-.animated-text {
-  background-image: -webkit-linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 50%);
-  background-size: 100% 50px;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-animation: stripes 2s linear infinite;
-  animation: stripes 2s linear infinite;
-  font-size: 100px;
-}
-
-@-webkit-keyframes stripes {
-  100% {
-    background-position: 0 -50px;
-  }
-}
-
-@keyframes stripes {
-  100% {
-    background-position: 0 -50px;
-  }
-}
-
-*, body, html {
- margin: 0px;
- padding: 0px;
- box-sizing: border-box;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
-.waves {
- position:relative;
- width: 100%;
- height: 40%;
-}
-
-
-.content {
- position:relative;
- height:20vh;
- text-align:center;
- background-color: white;
-}
-
-
-/* Animation */
-
-.parallax > use {
- animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
-}
-
-
-.parallax > use:nth-child(1) {
- animation-delay: -2s;
- animation-duration: 7s;
-}
-
-
-.parallax > use:nth-child(2) {
- animation-delay: -3s;
- animation-duration: 10s;
-}
-
-
-.parallax > use:nth-child(3) {
- animation-delay: -4s;
- animation-duration: 13s;
-}
-
-
-.parallax > use:nth-child(4) {
- animation-delay: -5s;
- animation-duration: 20s;
-}
-
-
-@keyframes move-forever {
- 0% {
-  transform: translate3d(-90px,0,0);
- }
-
-
- 100% {
-   transform: translate3d(85px,0,0);
- }
-}
-
-.header {
-   text-align: center;
-   font-size: 20px;
-}
-
-
-.blue-content {
-   color: #fff;
-   padding-left: 5%;
-   margin-top: -5px;
-   background-color: #000;
-}
-
-
-
-body {
-  margin:0;
-  /*background: linear-gradient(90deg, rgba(203,14,190,1) 0%, rgba(203,14,190,1) 33%, rgba(0,153,255,1) 100%);*/
-font-family: 'PT Sans', sans-serif;
-  color: #000;
-}
-
-h1 {
-  font-family: "Silkscreen";
-    font-size: 50px;
-}
-p {
-  font-size:25px;
-  /*color: #333333;*/
-}
-
-.ocean {
-  height: 5%;
-  width:100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  
-}
-
-
-
-
-.header {
-  position:relative;
-  text-align:center;
-  color: #000;
-}
-.logo {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-}
-  .logo {
-    animation: reveal 2s ease-in-out;
-    
-  position: absolute;
-  left: 50px;
-  top: 50px;
-}
-.logo:hover {
-  animation: reveal 3s;
-position: absolute;
-  left: 50px;
-  top: 50px;
-  height: 500px;
-  width:500px;
-  fill:black;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
-  }
-.inner-header {
-  font-family: 'PT Sans', sans-serif;
-  height:65vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
-#mycanvas {
-    position: absolute;
-    left: 0%;
-    bottom: 0%;
-    background-color: #fff;
-}
-
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-.content {
-  position:relative;
-  height:20vh;
-  background-color: #fff;
-}
-
-/* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-                         border: 7px black;
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% {
-    transform: translate3d(85px,0,0);
-  }
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-}
-  @keyframes reveal {
-   0% {
-      
-    }
-    5% {
-      transform: rotate(180deg);
-    }
-</style>
-<script>
- window.addEventListener("load",function(){
-  
-    var canvas = document.getElementById("mycanvas");
-    var ctx = canvas.getContext("2d");
-    var win_width = window.innerWidth;
-    var win_height = window.innerHeight;
-    var count = 100;
-    var particles = [];
-    var createdObj = 0;
-    canvas.setAttribute("width", win_width);
-    canvas.setAttribute("height",win_height);
-
-    function Particle(){
-      this.dropeds = [];
-      this.x = Math.random() * win_width;
-      this.y = -(Math.random() * 1000 + 100);
-      this.width = Math.floor(Math.random() * 2 + 1);
-      if(this.width == 2){
-        this.height = Math.floor(Math.random() * 20 + 17);
-      } else{
-        this.height = Math.floor(Math.random() * 15 + 10);
-      }
-      this.speed = Math.random()*10 + 5;
-
-      this.Droped = function(x,y){
-          createdObj = 1;
-          this.color = "#000";
-          this.x = x;
-          this.y = y;
-          this.radius = 1;
-          this.speed = Math.random() * 5 + 3;
-          this.angle = Math.PI* (Math.random() * 2);
-        
-          this.plump = function(){
-            if(this.radius > 30 ) this.radius = 1000;
-            this.radius += this.speed;
-            this.fx = this.radius * Math.cos(this.angle) + this.x;
-            this.fy = this.radius * Math.sin(this.angle) + this.y;
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.rect(this.fx, this.fy, 3, 3);
-            ctx.closePath();
-            ctx.fill();
-            }   
-      }  
-    }
-
-    Particle.prototype.drop = function(){
-      if(this.y > win_height) this.y = -(Math.random() * 1000 + 100);
-      this.y += this.speed;
-      ctx.fillStyle = "#0099ff";
-      ctx.beginPath();
-      ctx.rect(this.x, this.y, this.width, this.height);
-      ctx.closePath();
-      ctx.fill();
-    }
-     
-    for(var i = 0; i < count; i++){
-      particles[i] = new Particle();
-    }
-    function animate(){
-      ctx.clearRect(0, 0, win_width, win_height);
-      for (var i = 0; i < particles.length; i++) {
-        particles[i].drop();
-        // if( particles[i].y > win_height && particles[i].y < win_height + 10){
-        //   for(var a = 0; a < 25; a++){
-        //     particles[i].dropeds[a] = new particles[i].Droped(particles[i].x, particles[i].y);
-        //   }
-        // }
-        // if(createdObj == 1){
-        //   for(var n = 0; n < particles[i].dropeds.length; n++){
-        //     particles[i].dropeds[n].plump();
-        //   }
-        // }
-      }  
-      requestAnimationFrame(animate);
-    }
-    animate();
-  });
