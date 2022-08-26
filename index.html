@@ -6,7 +6,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
-     
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
     </head>
     <div class="header">
     
@@ -14,7 +16,7 @@
     <div class="inner-header flex">
     <!--Just the logo.. Don't mind this-->
     
-    <h1>sup. leave a message after the beep</h1>
+    <h1 class="animated-text">Game Hub</h1>
     </div>
     
     <!--Waves Container-->
@@ -44,11 +46,32 @@
 <!--Content ends-->
 <div class="blue-content">
     <h1>Hello!</h1>
-    <p>Welcome to my site!</p>
+    <p>Welcome to our site!</p>
     <p>It is still a work in progress!</p>
 </div>
 </html>
 <style>
+.animated-text {
+  background-image: -webkit-linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 50%);
+  background-size: 100% 50px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-animation: stripes 2s linear infinite;
+  animation: stripes 2s linear infinite;
+  font-size: 100px;
+}
+
+@-webkit-keyframes stripes {
+  100% {
+    background-position: 0 -50px;
+  }
+}
+
+@keyframes stripes {
+  100% {
+    background-position: 0 -50px;
+  }
+}
 
 *, body, html {
  margin: 0px;
@@ -137,6 +160,7 @@ font-family: 'PT Sans', sans-serif;
 }
 
 h1 {
+  font-family: "Silkscreen";
     font-size: 50px;
 }
 p {
