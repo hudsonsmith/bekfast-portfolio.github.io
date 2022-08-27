@@ -8,7 +8,7 @@
 }
 
 body {
- font-family: 'Silkscreen', cursive;
+ font-family: 'Silkscreen', 'monospace';
 }
 
 .container {
@@ -81,7 +81,7 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: #ffffff;
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -101,7 +101,7 @@ body {
 .navbar .menu-items {
   padding-top: 120px;
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   transform: translate(-150%);
   display: flex;
@@ -119,11 +119,9 @@ body {
 }
 
 .logo {
-  position: absolute;
-  top: 5px;
-  right: 15px;
+  text-align: center;
   font-size: 1.2rem;
-  color: #0e2431;
+  color: #ffffff;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -144,4 +142,10 @@ body {
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
+}
+
+.game-selection {
+    background-color: #000;
+    margin-top: -5px;
+    /* height: 190%; */
 }
