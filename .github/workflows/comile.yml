@@ -24,7 +24,7 @@ jobs:
     - uses: actions/setup-python@v4.2.0
     - name: Encrypt index.html
       run: |
-        echo "Working Test" >> hi.txt
+        python3 ./scripts/encrypt.py ./src/index.html
     - name: Commit files
       run: |
         git add .
