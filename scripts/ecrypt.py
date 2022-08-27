@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 try:
 	from Crypto import Random
 	from Crypto.Util.py3compat import bchr
