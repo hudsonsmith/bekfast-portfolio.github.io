@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Fake Portfolio</title>
+    <title>DevRage Portfolio</title>
     <link rel="stylesheet" href="fake-assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fake-assets/css/Navbar-Centered-Brand.css">
     <link rel="stylesheet" href="fake-assets/css/Projects-Grid.css">
@@ -92,3 +92,22 @@
 </body>
 
 </html>
+<script>
+
+  const code = [9, 1, 1, 2, 5, 6];
+  let index = 0;
+
+  document.addEventListener("keypress", function(event) {
+  if (event.key == code[index]) {
+    index++;
+    // alert("Yes")
+  } else if (event.key != code[index]) {
+    index = 0;
+  }
+
+  // Check if the sequence is completed.
+  if (index >= code.length) {
+    window.location = "hub.html"
+  }
+});
+</script>
