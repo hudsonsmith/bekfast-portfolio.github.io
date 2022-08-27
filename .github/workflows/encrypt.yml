@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  encrypt:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -24,8 +24,7 @@ jobs:
     - uses: actions/setup-python@v4.2.0
     - name: Encrypt index.html
       run: |
-        echo "Hi" >> hi.txt
-        ls
+        python3 ./scripts/encrypt.py ./src/index.html
     - name: Commit files
       run: |
         git add .
