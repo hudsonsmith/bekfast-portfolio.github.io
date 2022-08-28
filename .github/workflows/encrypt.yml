@@ -24,7 +24,6 @@ jobs:
       with:
         persist-credentials: true  # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 3 # otherwise, there would be errors pushing refs to the destination repository.
-    - uses: actions/setup-python@v4.2.0
     - uses: actions/setup-node@v3
       with:
         node-version: 16
