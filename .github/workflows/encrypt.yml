@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  password: ${{ secrets.password }}
+
 jobs:
   encrypt:
     runs-on: ubuntu-latest
@@ -25,10 +28,14 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: Encrypt index.html
+    - name: Install pagecrypt
       run: |
         npm i -D pagecrypt
-        npx pagecrypt ./src/hub.html ./docs/hub.html ${{ secrets.password }}
+    
+    - name: Encrypt files
+      run: |
+        ./scripts/encrypt.sh
+    
     - name: Commit files
       run: |
         git add .
