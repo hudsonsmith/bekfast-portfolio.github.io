@@ -113,6 +113,8 @@
 .flex-grid {
   display: flex;
   margin-top: -5px;
+  margin-bottom: -5px;
+  align-items: center;
 }
 
 .flex-grid .col {
