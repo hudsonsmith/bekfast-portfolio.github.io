@@ -112,7 +112,9 @@
 
 .flex-grid {
   display: flex;
+  margin-top: -5px;
 }
+
 .flex-grid .col {
   flex: 1;
 }
