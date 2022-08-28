@@ -28,7 +28,7 @@ jobs:
     - name: Encrypt index.html
       run: |
         npm i -D pagecrypt
-        npx pagecrypt ./src/hub ./docs/hub ${{ secrets.password }}
+        npx pagecrypt ./src/hub.html ./docs/hub.html ${{ secrets.password }}
     - name: Commit files
       run: |
         git add .
