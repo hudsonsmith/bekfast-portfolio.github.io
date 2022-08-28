@@ -4,6 +4,9 @@ if [[ $1 ]]; then
     password="$1"
 fi
 
+# Remove all game files.
+rm -rf ./docs/games/*
+
 # Encrypt the hub file with the password
 npx pagecrypt ./src/hub.html ./docs/hub.html $password
 
