@@ -34,6 +34,7 @@ jobs:
     
     - name: Encrypt files
       run: |
+        chmod 755 ./scripts/encrypt.sh
         ./scripts/encrypt.sh
     
     - name: Commit files
