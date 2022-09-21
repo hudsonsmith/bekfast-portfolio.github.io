@@ -33,13 +33,13 @@
       KEY           = { SPACE: 32, LEFT: 65, UP: 87, RIGHT: 68, DOWN: 83 }, // input key codes
       IMAGES        = ['ground', 'ladder', 'player', 'monster', 'coins'],   // sprite image files for loading
       PLAYER        = { DEBUG: false,                                       // enable player debug rendering (bounding box and collision points)
-        RIGHT: { x: 0,    y: 0, w: 72, h: 96, frames: 11, fps: 30 },        // animation - player running right
-        STAND: { x: 792,  y: 0, w: 72, h: 96, frames: 1,  fps: 30 },        // animation - player standing still
-        LEFT:  { x: 1224, y: 0, w: 72, h: 96, frames: 11, fps: 30 },        // animation - player running left
-        BACK:  { x: 2016, y: 0, w: 72, h: 96, frames: 1,  fps: 30 },        // animation - player standing still with back to camera (on ladder but not moving)
-        CLIMB: { x: 2016, y: 0, w: 72, h: 96, frames: 11, fps: 30 },        // animation - player climbing ladder
-        HURTL: { x: 1080, y: 0, w: 72, h: 96, frames: 1,  fps: 10 },        // animation - player hurt while running left
-        HURTR: { x: 1152, y: 0, w: 72, h: 96, frames: 1,  fps: 10 }         // animation - player hurt while running right
+        RIGHT: { x: 0,    y: 0, w: 87.53, h: 96, frames: 1, fps: 1 },        // animation - player running right
+        STAND: { x: 792,  y: 0, w: 87.53, h: 96, frames: 1,  fps: 1 },        // animation - player standing still
+        LEFT:  { x: 1224, y: 0, w: 87.53, h: 96, frames: 1, fps: 1 },        // animation - player running left
+        BACK:  { x: 2016, y: 0, w: 87.53, h: 96, frames: 1,  fps: 1 },        // animation - player standing still with back to camera (on ladder but not moving)
+        CLIMB: { x: 2016, y: 0, w: 87.53, h: 96, frames: 1, fps: 1 },        // animation - player climbing ladder
+        HURTL: { x: 1080, y: 0, w: 87.53, h: 96, frames: 1,  fps: 1 },        // animation - player hurt while running left
+        HURTR: { x: 1152, y: 0, w: 87.53, h: 96, frames: 1,  fps: 1 }         // animation - player hurt while running right
       },
       MONSTERS = [
         { name: "BLOCK", nx: -0.5, ny: -0.5, w: 1.5*METER, h: 1.5*METER, speed: 4*METER, dir: 'up',    vertical: true,  horizontal: false, animation: { up:   { x:   0, y:  0, w: 50, h: 50, frames: 2, fps: 5 }, down:  { x:   0, y:  0, w: 50, h: 50, frames: 2, fps: 5 } } },
