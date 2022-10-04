@@ -11,4 +11,3 @@ This is the code for my site!
 This site is written in Vanilla JS, HTML and CSS.
 
 [bekfast-portfolio.github.io](https://bekfast-portfolio.github.io)
-[Link](https://translate.google.com/translate?sl=ja&tl=en&hl=en&u=discord.com&client=webapp)
