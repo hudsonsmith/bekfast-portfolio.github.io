@@ -1,221 +1,349 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./css/animated-text.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/waves.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/animated-text.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/waves.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/cards.css" />
   </head>
-    <div class="header">
+  <div class="header">
+    <!--Content before waves-->
+    <div class="inner-header flex">
+      <!--Just the logo.. Don't mind this-->
+      <h1 class="animated-text">Game Hub</h1>
+    </div>
 
-      <!--Content before waves-->
-      <div class="inner-header flex">
-        <!--Just the logo.. Don't mind this-->
-        <h1 class="animated-text">Game Hub</h1>
-      </div>
-    
-      <!--Waves Container-->
-      <div>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-          <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          </defs>
-          <g class="parallax">
+    <!--Waves Container-->
+    <div>
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g class="parallax">
           <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,0,0,0.7" />
           <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,0,0,0.5)" />
           <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,0,0.3)" />
           <use xlink:href="#gentle-wave" x="48" y="7" fill="#000" />
-          </g>
-        </svg>
-      </div>
+        </g>
+      </svg>
     </div>
+  </div>
 
-    <div class="game-selection">
-      <nav>
-        <div class="navbar">
-          <div class="container nav-container">
-              <input class="checkbox" type="checkbox" name="" id="" />
-              <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-              </div>  
-            <div class="logo">
-              <h1>GAME SELECTION</h1>
-            </div>
-            <!-- <div class="menu-items">
+  <div class="game-selection">
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <div class="logo">
+            <h1>GAME SELECTION</h1>
+          </div>
+          <!-- <div class="menu-items">
               <li><a href="../games/space-invaders.html">Space Invaders</a></li>
             </div> -->
-          </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <div class="flex-grid" align="center">
-        <div class="col">
-          <div class="card" onclick="window.location='./games/space-invaders/index.html'">
-            <div class="card-image" style="background-image: url('https://th-thumbnailer.cdn-si-edu.com/AoIYul57EQipNaqcmTHcjlBIVqo=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/7f/4c/7f4c2d11-089f-4d86-8052-5cf95295be7e/file-20180531-69508-1oenzpj.png')"></div>
-            <div class="card-text">
-              <!-- <span class="date">4 days ago</span> -->
-              <h2>Space Invaders</h2>
-              <p>The classic atari game, recreated in html js and css.</p>
-            </div>
-            <div class="card-stats">
-              <div class="stat">
-                <div class="value">4<sup>m</sup></div>
-                <div class="type">play</div>
-              </div>
-              <div class="stat border">
-                <div class="value">EASY</div>
-                <div class="type">difficulty</div>
-              </div>
-              <div class="stat">
-                <div class="value">2.5</div>
-                <div class="type">stars</div>
-              </div>
-            </div>
+    <div class="flex-grid" align="center">
+      <div class="col">
+        <div
+          class="card"
+          onclick="window.location='./games/space-invaders/index.html'"
+        >
+          <div
+            class="card-image"
+            style="
+              background-image: url('https://th-thumbnailer.cdn-si-edu.com/AoIYul57EQipNaqcmTHcjlBIVqo=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/7f/4c/7f4c2d11-089f-4d86-8052-5cf95295be7e/file-20180531-69508-1oenzpj.png');
+            "
+          ></div>
+          <div class="card-text">
+            <!-- <span class="date">4 days ago</span> -->
+            <h2>Space Invaders</h2>
+            <p>The classic atari game, recreated in html js and css.</p>
           </div>
-        </div>
-
-        <div class="col">
-          <div class="card" onclick="window.location='./games/slope/index.html'">
-            <div class="card-image" style="background-image: url('https://proconian.com/wp-content/uploads/2022/02/Slope.jpg')"></div>
-            <div class="card-text">
-              <h2>Slope</h2>
-              <p>A true necessity for web gaming.</p>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">4<sup>m</sup></div>
+              <div class="type">play</div>
             </div>
-            <div class="card-stats">
-              <div class="stat">
-                <div class="value">10<sup>m</sup></div>
-                <div class="type">play</div>
-              </div>
-              <div class="stat border">
-                <div class="value">HARD</div>
-                <div class="type">difficulty</div>
-              </div>
-              <div class="stat">
-                <div class="value">4.5</div>
-                <div class="type">stars</div>
-              </div>
+            <div class="stat border">
+              <div class="value">EASY</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">2.5</div>
+              <div class="type">stars</div>
             </div>
           </div>
         </div>
-
-
-        <div class="col">
-          <div class="card" onclick="window.location='./games/cookie-clicker/index.html'">
-            <div class="card-image" style="background-image: url('./img/cookie-clicker.png')"></div>
-            <div class="card-text">
-              <h2>Cookie Clicker</h2>
-              <p>A must play tycoon game in which you rule the world with your cookies.</p>
-            </div>
-            <div class="card-stats">
-              <div class="stat">
-                <div class="value">15<sup>m</sup></div>
-                <div class="type">play</div>
-              </div>
-              <div class="stat border">
-                <div class="value">EASY</div>
-                <div class="type">difficulty</div>
-              </div>
-              <div class="stat">
-                <div class="value">5</div>
-                <div class="type">stars</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <div class="flex-grid" align="center">
-        <div class="col">
-          <div class="card" onclick="window.location='./games/dino_game/index.html'">
-            <div class="card-image" style="background-image: url('https://cdn.mos.cms.futurecdn.net/bpxg9PhUbdU75Jtv7ESQWQ.jpg')"></div>
-            <div class="card-text">
-              <!-- <span class="date">4 days ago</span> -->
-              <h2>Dino Game</h2>
-              <p>The dino game shown on chrome's offline screen.</p>
+      <div class="col">
+        <div class="card" onclick="window.location='./games/slope/index.html'">
+          <div
+            class="card-image"
+            style="
+              background-image: url('https://proconian.com/wp-content/uploads/2022/02/Slope.jpg');
+            "
+          ></div>
+          <div class="card-text">
+            <h2>Slope</h2>
+            <p>A true necessity for web gaming.</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">10<sup>m</sup></div>
+              <div class="type">play</div>
             </div>
-            <div class="card-stats">
-              <div class="stat">
-                <div class="value">3<sup>m</sup></div>
-                <div class="type">play</div>
-              </div>
-              <div class="stat border">
-                <div class="value">EASY</div>
-                <div class="type">difficulty</div>
-              </div>
-              <div class="stat">
-                <div class="value">3.2</div>
-                <div class="type">stars</div>
-              </div>
+            <div class="stat border">
+              <div class="value">HARD</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">4.5</div>
+              <div class="type">stars</div>
             </div>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card" onclick="window.location='./games/HexGL/index.html'">
-            <div class="card-image" style="background-image: url('./img/hexgl.png')"></div>
-            <div class="card-text">
-              <!-- <span class="date">4 days ago</span> -->
-              <h2>HexGL</h2>
-              <p>A futuristic racing game.</p>
-            </div>
-            <div class="card-stats">
-              <div class="stat">
-                <div class="value">3<sup>m</sup></div>
-                <div class="type">play</div>
-              </div>
-              <div class="stat border">
-                <div class="value">HARD</div>
-                <div class="type">difficulty</div>
-              </div>
-              <div class="stat">
-                <div class="value">3.5</div>
-                <div class="type">stars</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card" onclick="window.location='./games/javascript-tower-platformer/index.html'">
-            <div class="card-image" style="background-image: url('./img/hexgl.png')"></div>
-            <div class="card-text">
-              <!-- <span class="date">4 days ago</span> -->
-              <h2>Javascript Platformer</h2>
-              <p>A javascript platformer game.</p>
-            </div>
-            <div class="card-stats">
-              <div class="stat">
-                <div class="value">5<sup>m</sup></div>
-                <div class="type">play</div>
-              </div>
-              <div class="stat border">
-                <div class="value">MEDIUM</div>
-                <div class="type">difficulty</div>
-              </div>
-              <div class="stat">
-                <div class="value">3.5</div>
-                <div class="type">stars</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
+      <div class="col">
+        <div
+          class="card"
+          onclick="window.location='./games/cookie-clicker/index.html'"
+        >
+          <div
+            class="card-image"
+            style="background-image: url('./img/cookie-clicker.png')"
+          ></div>
+          <div class="card-text">
+            <h2>Cookie Clicker</h2>
+            <p>
+              A must play tycoon game in which you rule the world with your
+              cookies.
+            </p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">15<sup>m</sup></div>
+              <div class="type">play</div>
+            </div>
+            <div class="stat border">
+              <div class="value">EASY</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">5</div>
+              <div class="type">stars</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div class="flex-grid" align="center">
+      <div class="col">
+        <div
+          class="card"
+          onclick="window.location='./games/dino_game/index.html'"
+        >
+          <div
+            class="card-image"
+            style="
+              background-image: url('https://cdn.mos.cms.futurecdn.net/bpxg9PhUbdU75Jtv7ESQWQ.jpg');
+            "
+          ></div>
+          <div class="card-text">
+            <!-- <span class="date">4 days ago</span> -->
+            <h2>Dino Game</h2>
+            <p>The dino game shown on chrome's offline screen.</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">3<sup>m</sup></div>
+              <div class="type">play</div>
+            </div>
+            <div class="stat border">
+              <div class="value">EASY</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">3.2</div>
+              <div class="type">stars</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" onclick="window.location='./games/HexGL/index.html'">
+          <div
+            class="card-image"
+            style="background-image: url('./img/hexgl.png')"
+          ></div>
+          <div class="card-text">
+            <!-- <span class="date">4 days ago</span> -->
+            <h2>HexGL</h2>
+            <p>A futuristic racing game.</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">3<sup>m</sup></div>
+              <div class="type">play</div>
+            </div>
+            <div class="stat border">
+              <div class="value">HARD</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">3.5</div>
+              <div class="type">stars</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div
+          class="card"
+          onclick="window.location='./games/javascript-tower-platformer/index.html'"
+        >
+          <div
+            class="card-image"
+            style="background-image: url('./img/hexgl.png')"
+          ></div>
+          <div class="card-text">
+            <!-- <span class="date">4 days ago</span> -->
+            <h2>Javascript Platformer</h2>
+            <p>A javascript platformer game.</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">5<sup>m</sup></div>
+              <div class="type">play</div>
+            </div>
+            <div class="stat border">
+              <div class="value">MEDIUM</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">3.5</div>
+              <div class="type">stars</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-grid" align="center">
+      <div class="col">
+        <div
+          class="card"
+          onclick="window.location='./games/fridaynightfunkin/index.html'"
+        >
+          <div
+            class="card-image"
+            style="
+              background-image: url('https://wallpapercave.com/wp/wp8261297.png');
+            "
+          ></div>
+          <div class="card-text">
+            <h2>Friday Night Funkin</h2>
+            <p>Addictive rythym game with funky music.</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">10<sup>m</sup></div>
+              <div class="type">play</div>
+            </div>
+            <div class="stat border">
+              <div class="value">HARD</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">5</div>
+              <div class="type">stars</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" onclick="">
+          <div class="card-image" style="background-color: #2257a0"></div>
+          <div class="card-text">
+            <h2>Coming Soon!</h2>
+            <p>Don't worry, something will be here...</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">?<sup>m</sup></div>
+              <div class="type">play</div>
+            </div>
+            <div class="stat border">
+              <div class="value">EASY</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">?</div>
+              <div class="type">stars</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" onclick="">
+          <div class="card-image" style="background-color: #2257a0"></div>
+          <div class="card-text">
+            <h2>Coming Soon!</h2>
+            <p>Don't worry, something will be here...</p>
+          </div>
+          <div class="card-stats">
+            <div class="stat">
+              <div class="value">?<sup>m</sup></div>
+              <div class="type">play</div>
+            </div>
+            <div class="stat border">
+              <div class="value">EASY</div>
+              <div class="type">difficulty</div>
+            </div>
+            <div class="stat">
+              <div class="value">?</div>
+              <div class="type">stars</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>
