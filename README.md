@@ -13,3 +13,5 @@ This site is written in Vanilla JS, HTML and CSS.
 [bekfast-portfolio.github.io](https://bekfast-portfolio.github.io)
 
 [mexiprivate](https://mexiprivate.netlify.app/)
+
+[funny_shooter](https://mexiprivate.netlify.app/play/funnyshooter/)
