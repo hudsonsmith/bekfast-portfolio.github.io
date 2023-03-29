@@ -15,3 +15,5 @@ This site is written in Vanilla JS, HTML and CSS.
 [mexiprivate](https://mexiprivate.netlify.app/)
 
 [funny_shooter](https://mexiprivate.netlify.app/play/funnyshooter/)
+
+[gamepak](https://gamepak.azurewebsites.net/)
